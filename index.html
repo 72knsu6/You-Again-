@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>@cielo_marchito</title>
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #ccc;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    .header {
+      padding: 2rem;
+      background: #1a1a1a;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .profile {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .posts {
+      padding: 2rem;
+    }
+    .post {
+      margin-bottom: 2rem;
+      border-left: 2px solid #444;
+      padding-left: 1rem;
+    }
+    .post .date {
+      color: #555;
+      font-size: 0.8rem;
+    }
+    .post .content {
+      margin-top: 0.3rem;
+    }
+    .floating-text {
+      position: absolute;
+      color: #f00;
+      font-size: 0.9rem;
+      animation: fadeInOut 10s infinite;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      10% { opacity: 0.8; }
+      90% { opacity: 0.8; }
+      100% { opacity: 0; }
+    }
+    audio {
+      display: none;
+    }
+    .secret {
+      color: #0e0e0e;
+      user-select: none;
+      font-size: 0.01px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>@cielo_marchito</h1>
+    <div class="profile">No actualiza desde el 16/05/2025. Nadie sabe por qué.</div>
+  </div>
+  <div class="posts">
+    <div class="post"><div class="date">15/05/2025</div><div class="content">"Hoy soñé que me iba y nadie lloraba... solo la lluvia se notaba."</div></div>
+    <div class="post"><div class="date">14/05/2025</div><div class="content">"Las voces en mi cabeza ya no discuten, solo ríen. Creo que ya decidieron por mí."</div></div>
+    <div class="post"><div class="date">12/05/2025</div><div class="content">"La soledad es un lugar. Y hace semanas que vivo ahí."</div></div>
+    <div class="post"><div class="date">10/05/2025</div><div class="content">"¿Y si mi alma solo fue un error del código fuente?"</div></div>
+    <div class="post"><div class="date">08/05/2025</div><div class="content">"No volveré a escribir después de esto. Si lees esto, sigue el eco..."</div></div>
+  </div>
+  <div class="secret">https://drive.google.com/file/d/1i6TRU01FujkE-ECHO-SEC-001</div>
+  <audio autoplay loop>
+    <source src="ambience.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    const frases = ['Tú tampoco le importas a nadie.', 'No vas a ser recordado. Acéptalo.', '¿Para qué seguir respirando si no vives?', 'El vacío es lo único que no te va a abandonar.', 'Tu reflejo ya no cree en ti.', 'Eres solo ruido blanco en un mundo apagado.', 'La muerte no es el final, es el descanso.', 'Nadie está escuchando. Nunca lo hicieron.', 'El amor no te va a salvar.', 'Cada día es un error que se repite.', 'Te estás pudriendo en silencio.', 'No eres especial. Nunca lo fuiste.', '¿Y si ya estás muerto y solo estás recordando?', 'La esperanza es una cadena invisible.', 'Tu alma ya se fugó. Solo queda la cáscara.', '¿No te cansas de fingir que estás bien?', 'Tu historia termina aquí. Y nadie va a leerla.', 'La oscuridad no juzga, solo te abraza.', 'A nadie le importa lo que escribas aquí.', 'Tu dolor no es único. Es desechable.', 'Bienvenido a la verdad: el olvido.'];
+    function createFloatingText(text) {
+      const span = document.createElement('span');
+      span.textContent = text;
+      span.classList.add('floating-text');
+      span.style.top = Math.random() * window.innerHeight + 'px';
+      span.style.left = Math.random() * window.innerWidth + 'px';
+      document.body.appendChild(span);
+      setTimeout(() => span.remove(), 10000);
+    }
+    setInterval(() => {
+      const text = frases[Math.floor(Math.random() * frases.length)];
+      createFloatingText(text);
+    }, 5000);
+  </script>
+</body>
+</html>
