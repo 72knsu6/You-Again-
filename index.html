@@ -70,7 +70,7 @@
 <body>
   <div class="header">
     <h1>@cielo_marchito</h1>
-    <div class="profile">No actualiza desde el 16/05/2025. Nadie sabe por qué.</div>
+    <div class="profile">No actualiza desde el 16/05/2025.</div>
   </div>
   <div class="posts">
     <div class="post"><div class="date">15/05/2025</div><div class="content">"Hoy soñé que me iba y nadie lloraba... solo la lluvia se notaba."</div></div>
@@ -81,7 +81,7 @@
   </div>
   <div class="secret">https://drive.google.com/file/d/1i6TRU01FujkE-ECHO-SEC-001</div>
   <audio autoplay loop>
-    <source src="ambience.mp3" type="audio/mpeg">
+    <source src="grave(MP3_160K).mp3" type="audio/mpeg">
   </audio>
   <script>
     const frases = ['Tú tampoco le importas a nadie.', 'No vas a ser recordado. Acéptalo.', '¿Para qué seguir respirando si no vives?', 'El vacío es lo único que no te va a abandonar.', 'Tu reflejo ya no cree en ti.', 'Eres solo ruido blanco en un mundo apagado.', 'La muerte no es el final, es el descanso.', 'Nadie está escuchando. Nunca lo hicieron.', 'El amor no te va a salvar.', 'Cada día es un error que se repite.', 'Te estás pudriendo en silencio.', 'No eres especial. Nunca lo fuiste.', '¿Y si ya estás muerto y solo estás recordando?', 'La esperanza es una cadena invisible.', 'Tu alma ya se fugó. Solo queda la cáscara.', '¿No te cansas de fingir que estás bien?', 'Tu historia termina aquí. Y nadie va a leerla.', 'La oscuridad no juzga, solo te abraza.', 'A nadie le importa lo que escribas aquí.', 'Tu dolor no es único. Es desechable.', 'Bienvenido a la verdad: el olvido.'];
@@ -98,6 +98,16 @@
       const text = frases[Math.floor(Math.random() * frases.length)];
       createFloatingText(text);
     }, 5000);
+  </script>
+  <script>
+  document.body.addEventListener('click', () => {
+    const audio = document.getElementById('bg-audio');
+    if (audio && audio.paused) {
+      audio.play().catch((e) => {
+        console.log("Error al reproducir el audio:", e);
+      });
+    }
+  });
   </script>
 </body>
 </html>
