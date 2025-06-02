@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,10 +59,29 @@
     audio {
       display: none;
     }
-    .secret {
-      color: #0e0e0e;
+    /* Ocultar completamente los fragmentos con el link */
+    [class^="ɣ9_"], .fragmento01 {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      pointer-events: none;
       user-select: none;
-      font-size: 0.01px;
+    }
+    .ɣ9_1::before { content: "https://"; }
+    .ɣ9_2::before { content: "drive"; }
+    .ɣ9_3::before { content: ".google"; }
+    .ɣ9_4::before { content: ".com/file/d/"; }
+    .ɣ9_5::before { content: "1xCZcBKIBjk_2qdvRfYuWvnvp6Kc2qp4j"; }
+    .ɣ9_6::before { content: "/view?usp=drivesdk"; }
+
+    /* Mensaje oculto con caracteres raros */
+    .fragmento01::after {
+      content: "Ʒ̴̩̳͍͈ͧ̿O̷̢̜̠͔̯̯̩̬N̬͔̗̞̲̙̩̼͍͘͟͠0̵̜͉͓͔̞̹̲̱͝͠ ... [EXTRACT]";
+      color: black;
+      background: black;
+      user-select: none;
     }
   </style>
 </head>
@@ -79,12 +97,35 @@
     <div class="post"><div class="date">10/05/2025</div><div class="content">"¿Y si mi alma solo fue un error del código fuente?"</div></div>
     <div class="post"><div class="date">08/05/2025</div><div class="content">"No volveré a escribir después de esto. Si lees esto, sigue el eco..."</div></div>
   </div>
-  <div class="secret">https://drive.google.com/file/d/1i6TRU01FujkE-ECHO-SEC-001</div>
+
   <audio autoplay loop>
     <source src="grave(MP3_160K).mp3" type="audio/mpeg">
   </audio>
+
   <script>
-    const frases = ['Tú tampoco le importas a nadie.', 'No vas a ser recordado. Acéptalo.', '¿Para qué seguir respirando si no vives?', 'El vacío es lo único que no te va a abandonar.', 'Tu reflejo ya no cree en ti.', 'Eres solo ruido blanco en un mundo apagado.', 'La muerte no es el final, es el descanso.', 'Nadie está escuchando. Nunca lo hicieron.', 'El amor no te va a salvar.', 'Cada día es un error que se repite.', 'Te estás pudriendo en silencio.', 'No eres especial. Nunca lo fuiste.', '¿Y si ya estás muerto y solo estás recordando?', 'La esperanza es una cadena invisible.', 'Tu alma ya se fugó. Solo queda la cáscara.', '¿No te cansas de fingir que estás bien?', 'Tu historia termina aquí. Y nadie va a leerla.', 'La oscuridad no juzga, solo te abraza.', 'A nadie le importa lo que escribas aquí.', 'Tu dolor no es único. Es desechable.', 'Bienvenido a la verdad: el olvido.'];
+    const frases = [
+      'Tú tampoco le importas a nadie.',
+      'No vas a ser recordado. Acéptalo.',
+      '¿Para qué seguir respirando si no vives?',
+      'El vacío es lo único que no te va a abandonar.',
+      'Tu reflejo ya no cree en ti.',
+      'Eres solo ruido blanco en un mundo apagado.',
+      'La muerte no es el final, es el descanso.',
+      'Nadie está escuchando. Nunca lo hicieron.',
+      'El amor no te va a salvar.',
+      'Cada día es un error que se repite.',
+      'Te estás pudriendo en silencio.',
+      'No eres especial. Nunca lo fuiste.',
+      '¿Y si ya estás muerto y solo estás recordando?',
+      'La esperanza es una cadena invisible.',
+      'Tu alma ya se fugó. Solo queda la cáscara.',
+      '¿No te cansas de fingir que estás bien?',
+      'Tu historia termina aquí. Y nadie va a leerla.',
+      'La oscuridad no juzga, solo te abraza.',
+      'A nadie le importa lo que escribas aquí.',
+      'Tu dolor no es único. Es desechable.',
+      'Bienvenido a la verdad: el olvido.'
+    ];
     function createFloatingText(text) {
       const span = document.createElement('span');
       span.textContent = text;
@@ -99,49 +140,14 @@
       createFloatingText(text);
     }, 5000);
   </script>
-  <script>
-  document.body.addEventListener('click', () => {
-    const audio = document.getElementById('bg-audio');
-    if (audio && audio.paused) {
-      audio.play().catch((e) => {
-        console.log("Error al reproducir el audio:", e);
-      });
-    }
-  });
-  </script>
-  <style>
-  /* Nivel 6 - Enlace fragmentado entre clases imposibles de detectar */
-  .ɣ9_1::before { content: "https://"; }
-  .ɣ9_2::before { content: "drive"; }
-  .ɣ9_3::before { content: ".google"; }
-  .ɣ9_4::before { content: ".com/file/d/"; }
-  .ɣ9_5::before { content: "1xCZcBKIBjk_2qdvRfYuWvnvp6Kc2qp4j"; }
-  .ɣ9_6::before { content: "/view?usp=drivesdk"; }
 
-  /* Mensaje del ghost_final.txt oculto */
-  .fragmento01::after {
-    content: "Ʒ̴̩̳͍͈ͧ̿O̷̢̜̠͔̯̯̩̬N̬͔̗̞̲̙̩̼͍͘͟͠0̵̜͉͓͔̞̹̲̱͝͠ ... [EXTRACT]";
-    color: black;
-    background: black;
-  }
-</style>
+  <div class="ɣ9_1"></div>
+  <div class="ɣ9_2"></div>
+  <div class="ɣ9_3"></div>
+  <div class="ɣ9_4"></div>
+  <div class="ɣ9_5"></div>
+  <div class="ɣ9_6"></div>
+  <span class="fragmento01"></span>
 
-<!-- Los ojos vacíos no verán, solo el demente. -->
-
-<div class="ɣ9_1"></div>
-<div class="ɣ9_2"></div>
-<div class="ɣ9_3"></div>
-<div class="ɣ9_4"></div>
-<div class="ɣ9_5"></div>
-<div class="ɣ9_6"></div>
-<span class="fragmento01"></span>
 </body>
 </html>
-<script>
-  document.body.addEventListener('click', () => {
-    const audio = document.querySelector('audio');
-    if (audio) {
-      audio.play();
-    }
-  });
-</script>
